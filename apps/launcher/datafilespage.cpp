@@ -21,10 +21,10 @@
 #include "components/contentselector/view/contentselector.hpp"
 
 Launcher::DataFilesPage::DataFilesPage(Files::ConfigurationManager &cfg, GameSettings &gameSettings, LauncherSettings &launcherSettings, QWidget *parent)
-    : mCfgMgr(cfg)
+    : QWidget(parent)
+    , mCfgMgr(cfg)
     , mGameSettings(gameSettings)
     , mLauncherSettings(launcherSettings)
-    , QWidget(parent)
 {
     ui.setupUi (this);
     setObjectName ("DataFilesPage");

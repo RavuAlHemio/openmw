@@ -21,9 +21,9 @@ namespace CSVRender
 {
     SceneWidget::SceneWidget(QWidget *parent)
         : QWidget(parent)
+        , mCamera(NULL), mSceneMgr(NULL)
         , mWindow(NULL)
-        , mCamera(NULL)
-        , mSceneMgr(NULL), mNavigation (0), mLighting (0), mUpdate (false)
+        , mNavigation (0), mLighting (0), mUpdate (false)
         , mKeyForward (false), mKeyBackward (false), mKeyLeft (false), mKeyRight (false)
         , mKeyRollLeft (false), mKeyRollRight (false)
         , mFast (false), mDragging (false), mMod1 (false)

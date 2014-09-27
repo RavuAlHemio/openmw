@@ -494,9 +494,9 @@ namespace MWGui
 
     MagicSelectionDialog::MagicSelectionDialog(QuickKeysMenu* parent)
         : WindowModal("openmw_magicselection_dialog.layout")
-        , mParent(parent)
         , mWidth(0)
         , mHeight(0)
+        , mParent(parent)
     {
         getWidget(mCancelButton, "CancelButton");
         getWidget(mMagicList, "MagicList");

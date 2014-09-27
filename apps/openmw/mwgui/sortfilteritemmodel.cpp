@@ -62,8 +62,8 @@ namespace MWGui
 
     SortFilterItemModel::SortFilterItemModel(ItemModel *sourceModel)
         : mCategory(Category_All)
-        , mShowEquipped(true)
         , mFilter(0)
+        , mShowEquipped(true)
     {
         mSourceModel = sourceModel;
     }

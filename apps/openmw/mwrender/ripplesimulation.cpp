@@ -19,18 +19,18 @@ namespace MWRender
 
 
 RippleSimulation::RippleSimulation(Ogre::SceneManager* mainSceneManager)
-    : mMainSceneMgr(mainSceneManager),
-      mTime(0),
-      mCurrentFrameOffset(0,0),
-      mPreviousFrameOffset(0,0),
-      mRippleCenter(0,0),
-      mTextureSize(512),
+    : mTextureSize(512),
       mRippleAreaLength(1000),
       mImpulseSize(20),
-      mTexelOffset(0,0),
       mFirstUpdate(true),
       mRectangle(NULL),
-      mImpulse(NULL)
+      mMainSceneMgr(mainSceneManager),
+      mImpulse(NULL),
+      mTime(0),
+      mRippleCenter(0,0),
+      mTexelOffset(0,0),
+      mCurrentFrameOffset(0,0),
+      mPreviousFrameOffset(0,0)
 {
     Ogre::AxisAlignedBox aabInf;
     aabInf.setInfinite();

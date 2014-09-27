@@ -17,26 +17,26 @@
 
 MWMechanics::AiFollow::AiFollow(const std::string &actorId,float duration, float x, float y, float z)
 : mAlwaysFollow(false), mCommanded(false), mRemainingDuration(duration), mX(x), mY(y), mZ(z)
-, mActorRefId(actorId), mCellId(""), mActorId(-1)
+, mActorRefId(actorId), mActorId(-1), mCellId("")
 {
 }
 MWMechanics::AiFollow::AiFollow(const std::string &actorId,const std::string &cellId,float duration, float x, float y, float z)
 : mAlwaysFollow(false), mCommanded(false), mRemainingDuration(duration), mX(x), mY(y), mZ(z)
-, mActorRefId(actorId), mCellId(cellId), mActorId(-1)
+, mActorRefId(actorId), mActorId(-1), mCellId(cellId)
 {
 }
 
 MWMechanics::AiFollow::AiFollow(const std::string &actorId, bool commanded)
 : mAlwaysFollow(true), mCommanded(commanded), mRemainingDuration(0), mX(0), mY(0), mZ(0)
-, mActorRefId(actorId), mCellId(""), mActorId(-1)
+, mActorRefId(actorId), mActorId(-1), mCellId("")
 {
 }
 
 MWMechanics::AiFollow::AiFollow(const ESM::AiSequence::AiFollow *follow)
-    : mAlwaysFollow(follow->mAlwaysFollow), mRemainingDuration(follow->mRemainingDuration)
+    : mAlwaysFollow(follow->mAlwaysFollow), mCommanded(follow->mCommanded)
+    , mRemainingDuration(follow->mRemainingDuration)
     , mX(follow->mData.mX), mY(follow->mData.mY), mZ(follow->mData.mZ)
     , mActorRefId(follow->mTargetId), mActorId(-1), mCellId(follow->mCellId)
-    , mCommanded(follow->mCommanded)
 {
 
 }

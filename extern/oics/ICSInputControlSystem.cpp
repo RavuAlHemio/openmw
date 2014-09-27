@@ -32,9 +32,9 @@ namespace ICS
 		, DetectingBindingListener* detectingBindingListener
 		, InputControlSystemLog* log, size_t channelCount)
 		: mFileName(file)
+		, mLog(log)
 		, mDetectingBindingListener(detectingBindingListener)
 		, mDetectingBindingControl(NULL)
-		, mLog(log)
 		, mXmouseAxisBinded(false), mYmouseAxisBinded(false)
 	{
 		ICS_LOG(" - Creating InputControlSystem - ");

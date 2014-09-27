@@ -69,8 +69,8 @@ class ManualBulletShapeLoader : public OEngine::Physic::BulletShapeLoader
 public:
     ManualBulletShapeLoader()
       : mShape(NULL)
-      , mStaticMesh(NULL)
       , mCompoundShape(NULL)
+      , mStaticMesh(NULL)
       , mBoundingBox(NULL)
     {
     }

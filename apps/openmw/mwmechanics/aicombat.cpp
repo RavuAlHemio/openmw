@@ -89,9 +89,9 @@ namespace MWMechanics
     // NOTE: MIN_DIST_TO_DOOR_SQUARED is defined in obstacle.hpp
 
     AiCombat::AiCombat(const MWWorld::Ptr& actor) :
-        mTargetActorId(actor.getClass().getCreatureStats(actor).getActorId())
-      , mMinMaxAttackDuration()
+        mMinMaxAttackDuration()
       , mMovement()
+      , mTargetActorId(actor.getClass().getCreatureStats(actor).getActorId())
     {
         init();
 

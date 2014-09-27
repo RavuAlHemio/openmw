@@ -19,10 +19,11 @@ using namespace Ogre;
 
 OcclusionQuery::OcclusionQuery(OEngine::Render::OgreRenderer* renderer, SceneNode* sunNode) :
     mSunTotalAreaQuery(0), mSunVisibleAreaQuery(0), mActiveQuery(0),
-    mDoQuery(0), mSunVisibility(0),
+    mSunVisibility(0),
     mWasVisible(false),
     mActive(false),
-    mFirstFrame(true)
+    mFirstFrame(true),
+    mDoQuery(0)
 {
     mRendering = renderer;
     mSunNode = sunNode;

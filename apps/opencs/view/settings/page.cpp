@@ -17,7 +17,7 @@ QMap <CSVSettings::ViewType, CSVSettings::IViewFactory *>
 CSVSettings::Page::Page(const QString &pageName,
                         QList <CSMSettings::Setting *> settingList,
                         SettingWindow *parent) :
-    mParent(parent), mIsEditorPage (false), Frame(false, "", parent)
+    Frame(false, "", parent), mParent(parent), mIsEditorPage (false)
 {
     setObjectName (pageName);
 

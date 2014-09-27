@@ -44,14 +44,14 @@ namespace MWGui
 
     WaitDialog::WaitDialog()
         : WindowBase("openmw_wait_dialog.layout")
-        , mProgressBar()
         , mWaiting(false)
         , mSleeping(false)
-        , mHours(1)
-        , mRemainingTime(0.05)
         , mCurHour(0)
+        , mHours(1)
         , mManualHours(1)
+        , mRemainingTime(0.05)
         , mInterruptAt(-1)
+        , mProgressBar()
     {
         getWidget(mDateTimeText, "DateTimeText");
         getWidget(mRestText, "RestText");

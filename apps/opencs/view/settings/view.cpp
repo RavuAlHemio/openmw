@@ -12,12 +12,12 @@
 CSVSettings::View::View(CSMSettings::Setting *setting,
                         Page *parent)
 
-    : mDataModel(0), mParentPage (parent),
+    : Frame(true, setting->name(), parent),
+      mParentPage (parent), mDataModel(0),
       mHasFixedValues (!setting->declaredValues().isEmpty()),
       mIsMultiValue (setting->isMultiValue()),
       mViewKey (setting->page() + '/' + setting->name()),
-      mSerializable (setting->serializable()),
-      Frame(true, setting->name(), parent)
+      mSerializable (setting->serializable())
 {
     setObjectName (setting->name());
     buildView();

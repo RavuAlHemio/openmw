@@ -179,8 +179,8 @@ void CSVWorld::Table::contextMenuEvent (QContextMenuEvent *event)
 
 CSVWorld::Table::Table (const CSMWorld::UniversalId& id,
     bool createAndDelete, bool sorting, CSMDoc::Document& document)
-: mCreateAction (0), mCloneAction(0), mRecordStatusDisplay (0),
-  DragRecordTable(document)
+: DragRecordTable(document),
+  mCreateAction (0), mCloneAction(0), mRecordStatusDisplay (0)
 {
     mModel = &dynamic_cast<CSMWorld::IdTableBase&> (*mDocument.getData().getTableModel (id));
 

@@ -461,6 +461,11 @@ public:
     MovieAudioDecoder(VideoState *is)
       : mVideoState(is)
       , mAVStream(*is->audio_st)
+      , mSwr(0)
+      , mOutputSampleFormat(AV_SAMPLE_FMT_NONE)
+      , mDataBuf(NULL)
+      , mFrameData(NULL)
+      , mDataBufLen(0)
       , mFrame(av_frame_alloc())
       , mFramePos(0)
       , mFrameSize(0)
@@ -470,11 +475,6 @@ public:
       /* Correct audio only if larger error than this */
       , mAudioDiffThreshold(2.0 * 0.050/* 50 ms */)
       , mAudioDiffAvgCount(0)
-      , mSwr(0)
-      , mOutputSampleFormat(AV_SAMPLE_FMT_NONE)
-      , mDataBuf(NULL)
-      , mFrameData(NULL)
-      , mDataBufLen(0)
     { }
     virtual ~MovieAudioDecoder()
     {

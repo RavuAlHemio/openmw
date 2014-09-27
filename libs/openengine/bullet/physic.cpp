@@ -69,11 +69,9 @@ namespace Physic
 {
 
     PhysicActor::PhysicActor(const std::string &name, const std::string &mesh, PhysicEngine *engine, const Ogre::Vector3 &position, const Ogre::Quaternion &rotation, float scale)
-      : mName(name), mEngine(engine), mMesh(mesh)
-      , mBody(0), mOnGround(false), mInternalCollisionMode(true)
-      , mExternalCollisionMode(true)
-      , mForce(0.0f)
-      , mScale(scale)
+      : mBody(0), mScale(scale), mForce(0.0f), mOnGround(false)
+      , mInternalCollisionMode(true), mExternalCollisionMode(true), mMesh(mesh)
+      , mName(name), mEngine(engine)
     {
         if (!NifBullet::getBoundingBox(mMesh, mHalfExtents, mMeshTranslation, mMeshOrientation))
         {
@@ -216,8 +214,8 @@ namespace Physic
 
 
     PhysicEngine::PhysicEngine(BulletShapeLoader* shapeLoader) :
-        mDebugActive(0)
-      , mSceneMgr(NULL)
+        mSceneMgr(NULL)
+      , mDebugActive(0)
     {
         // Set up the collision configuration and dispatcher
         collisionConfiguration = new btDefaultCollisionConfiguration();

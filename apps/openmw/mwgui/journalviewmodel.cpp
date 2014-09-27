@@ -90,7 +90,7 @@ struct JournalViewModelImpl : JournalViewModel
         JournalViewModelImpl const *    mModel;
 
         BaseEntry (JournalViewModelImpl const * model, iterator_t itr) :
-            mModel (model), itr (itr), loaded (false)
+            itr (itr), mModel (model), loaded (false)
         {}
 
         virtual ~BaseEntry () {}

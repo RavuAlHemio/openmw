@@ -10,25 +10,25 @@ namespace SFO
     /// \brief General purpose wrapper for OGRE applications around SDL's event
     ///        queue, mostly used for handling input-related events.
     InputWrapper::InputWrapper(SDL_Window* window, Ogre::RenderWindow* ogreWindow, bool grab) :
-        mSDLWindow(window),
-        mOgreWindow(ogreWindow),
-        mWarpCompensate(false),
-        mMouseRelative(false),
-        mGrabPointer(false),
-        mWrapPointer(false),
-        mMouseZ(0),
-        mMouseY(0),
-        mMouseX(0),
-        mMouseInWindow(true),
-        mJoyListener(NULL),
-        mKeyboardListener(NULL),
         mMouseListener(NULL),
+        mKeyboardListener(NULL),
         mWindowListener(NULL),
-        mWindowHasFocus(true),
+        mJoyListener(NULL),
+        mWarpCompensate(false),
+        mWrapPointer(false),
+        mAllowGrab(grab),
+        mWantMouseVisible(false),
         mWantGrab(false),
         mWantRelative(false),
-        mWantMouseVisible(false),
-        mAllowGrab(grab)
+        mGrabPointer(false),
+        mMouseRelative(false),
+        mMouseZ(0),
+        mMouseX(0),
+        mMouseY(0),
+        mWindowHasFocus(true),
+        mMouseInWindow(true),
+        mSDLWindow(window),
+        mOgreWindow(ogreWindow)
     {
         _setupOISKeys();
     }

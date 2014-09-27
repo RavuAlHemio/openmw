@@ -21,9 +21,9 @@ namespace MWGui
 {
     AlchemyWindow::AlchemyWindow()
         : WindowBase("openmw_alchemy_window.layout")
+        , mSortModel(NULL)
         , mApparatus (4)
         , mIngredients (4)
-        , mSortModel(NULL)
     {
         getWidget(mCreateButton, "CreateButton");
         getWidget(mCancelButton, "CancelButton");

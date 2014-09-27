@@ -214,8 +214,8 @@ struct TypesetBookImpl::Typesetter : BookTypesetter
     Typesetter (size_t width, size_t height) :
         mPageWidth (width), mPageHeight(height),
         mSection (NULL), mLine (NULL), mRun (NULL),
-        mCurrentAlignment (AlignLeft),
-        mCurrentContent (NULL)
+        mCurrentContent (NULL),
+        mCurrentAlignment (AlignLeft)
     {
         mBook = boost::make_shared <Book> ();
     }
@@ -637,8 +637,8 @@ namespace
 
         GlyphStream (MyGUI::IFont* font, float left, float top, float Z,
                       MyGUI::Vertex* vertices, RenderXform const & renderXform) :
-            mZ(Z), mOrigin (left, top),
-            mFont (font), mVertices (vertices),
+            mZ(Z), mFont (font),
+            mOrigin (left, top), mVertices (vertices),
             mRenderXform (renderXform)
         {
             mVertexColourType = MyGUI::RenderManager::getInstance().getVertexFormat();
@@ -740,10 +740,10 @@ protected:
 
         TextFormat (MyGUI::IFont* id, PageDisplay * display) :
             mFont (id),
+            mCountVertex (0),
             mTexture (NULL),
             mRenderItem (NULL),
-            mDisplay (display),
-            mCountVertex (0)
+            mDisplay (display)
         {
         }
 

@@ -26,9 +26,9 @@ CSVWorld::ScriptEdit::ChangeLock::~ChangeLock()
 CSVWorld::ScriptEdit::ScriptEdit (const CSMDoc::Document& document, ScriptHighlighter::Mode mode,
     QWidget* parent)
     : QPlainTextEdit (parent),
+    mChangeLocked (0),
     mDocument (document),
-    mWhiteListQoutes("^[a-z|_]{1}[a-z|0-9|_]{0,}$", Qt::CaseInsensitive),
-    mChangeLocked (0)
+    mWhiteListQoutes("^[a-z|_]{1}[a-z|0-9|_]{0,}$", Qt::CaseInsensitive)
 {
 //    setAcceptRichText (false);
     setLineWrapMode (QPlainTextEdit::NoWrap);

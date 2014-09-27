@@ -64,22 +64,22 @@ void MWWorld::InventoryStore::setSlot (const MWWorld::ContainerStoreIterator& it
 }
 
 MWWorld::InventoryStore::InventoryStore()
- : mSelectedEnchantItem(end())
+ : mListener(NULL)
  , mUpdatesEnabled (true)
  , mFirstAutoEquip(true)
- , mListener(NULL)
+ , mSelectedEnchantItem(end())
 {
     initSlots (mSlots);
 }
 
 MWWorld::InventoryStore::InventoryStore (const InventoryStore& store)
  : ContainerStore (store)
- , mSelectedEnchantItem(end())
  , mMagicEffects(store.mMagicEffects)
- , mFirstAutoEquip(store.mFirstAutoEquip)
  , mListener(store.mListener)
  , mUpdatesEnabled(store.mUpdatesEnabled)
+ , mFirstAutoEquip(store.mFirstAutoEquip)
  , mPermanentMagicEffectMagnitudes(store.mPermanentMagicEffectMagnitudes)
+ , mSelectedEnchantItem(end())
 {
     copySlots (store);
 }

@@ -12,10 +12,10 @@ namespace MWGui
 {
 
     ItemStack::ItemStack(const MWWorld::Ptr &base, ItemModel *creator, size_t count)
-        : mCreator(creator)
-        , mCount(count)
+        : mType(Type_Normal)
         , mFlags(0)
-        , mType(Type_Normal)
+        , mCreator(creator)
+        , mCount(count)
         , mBase(base)
     {
         if (base.getClass().getEnchantment(base) != "")
@@ -57,10 +57,10 @@ namespace MWGui
     }
 
     ItemStack::ItemStack()
-        : mCreator(NULL)
-        , mCount(0)
+        : mType(Type_Normal)
         , mFlags(0)
-        , mType(Type_Normal)
+        , mCreator(NULL)
+        , mCount(0)
     {
     }
 

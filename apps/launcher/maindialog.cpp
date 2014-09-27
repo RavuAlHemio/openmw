@@ -30,7 +30,7 @@
 #include "datafilespage.hpp"
 
 Launcher::MainDialog::MainDialog(QWidget *parent)
-    : mGameSettings(mCfgMgr), QMainWindow (parent)
+    : QMainWindow (parent), mGameSettings(mCfgMgr)
 {
     // Install the stylesheet font
     QFile file;

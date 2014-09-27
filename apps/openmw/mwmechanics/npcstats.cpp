@@ -25,13 +25,13 @@
 #include "../mwbase/soundmanager.hpp"
 
 MWMechanics::NpcStats::NpcStats()
-    : mBounty (0)
-, mLevelProgress(0)
-, mDisposition(0)
+    : mDisposition(0)
+, mBounty (0)
 , mReputation(0)
 , mCrimeId(-1)
 , mWerewolfKills (0)
 , mProfit(0)
+, mLevelProgress(0)
 , mTimeToStartDrowning(20.0)
 , mLastDrowningHit(0)
 {

@@ -187,10 +187,11 @@ void PlaneReflection::setVisibilityMask (int flags)
 
 Water::Water (Ogre::Camera *camera, RenderingManager* rend) :
     mCamera (camera), mSceneMgr (camera->getSceneManager()),
-    mIsUnderwater(false), mVisibilityFlags(0),
-    mActive(1), mToggled(1),
-    mRendering(rend),
+    mIsUnderwater(false), mActive(true),
+    mToggled(true),
     mWaterTimer(0.f),
+    mRendering(rend),
+    mVisibilityFlags(0),
     mReflection(NULL),
     mRefraction(NULL),
     mSimulation(NULL),
