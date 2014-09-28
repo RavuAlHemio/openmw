@@ -43,6 +43,7 @@ namespace MWGui
         void onSelectedItem (MyGUI::Widget* sender);
         void onSelectedBackground (MyGUI::Widget* sender);
         void onMouseWheel(MyGUI::Widget* _sender, int _rel);
+        using MyGUI::Widget::onMouseWheel;
 
         ItemModel* mModel;
         MyGUI::ScrollView* mScrollView;

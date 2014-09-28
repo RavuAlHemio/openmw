@@ -134,7 +134,7 @@ namespace MWGui
         {
             std::string const & randomSplash = mResources.at (rand() % mResources.size());
 
-            Ogre::TextureManager::getSingleton ().load (randomSplash, Ogre::ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME);
+            Ogre::TextureManager::getSingleton ().load (randomSplash, Ogre::ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME, Ogre::TEX_TYPE_2D);
 
             // TODO: add option (filename pattern?) to use image aspect ratio instead of 4:3
             mBackgroundImage->setBackgroundImage(randomSplash, true, true);

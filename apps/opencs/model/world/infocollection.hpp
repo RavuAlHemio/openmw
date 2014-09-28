@@ -23,6 +23,7 @@ namespace CSMWorld
             void load (const Info& record, bool base);
 
             int getIndex (const std::string& id, const std::string& topic) const;
+            using Collection< Info, IdAccessor<Info> >::getIndex;
             ///< Return index for record \a id or -1 (if not present; deleted records are considered)
             ///
             /// \param id info ID without topic prefix

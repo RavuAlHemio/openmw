@@ -41,8 +41,10 @@ namespace CSVWorld
         NotEditableSubDelegate(const CSMWorld::IdTable* table, QObject * parent = 0);
 
         virtual void setEditorData (QLabel* editor, const QModelIndex& index) const;
+        using QAbstractItemDelegate::setEditorData;
 
         virtual void setModelData (QWidget* editor, QAbstractItemModel* model, const QModelIndex& index, CSMWorld::ColumnBase::Display display) const;
+        using QAbstractItemDelegate::setModelData;
 
         virtual void paint (QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const;
         ///< does nothing
@@ -54,6 +56,7 @@ namespace CSVWorld
                                 const QStyleOptionViewItem& option,
                                 const QModelIndex& index,
                                 CSMWorld::ColumnBase::Display display = CSMWorld::ColumnBase::Display_None) const;
+        using QAbstractItemDelegate::createEditor;
     };
 
     //this can't be nested into the DialogueDelegateDispatcher, because it needs to emit signals
@@ -120,6 +123,7 @@ namespace CSVWorld
         virtual void setEditorData (QWidget* editor, const QModelIndex& index) const;
 
         virtual void setModelData (QWidget* editor, QAbstractItemModel* model, const QModelIndex& index, CSMWorld::ColumnBase::Display display) const;
+        using QAbstractItemDelegate::setModelData;
 
         virtual void paint (QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const;
         ///< does nothing

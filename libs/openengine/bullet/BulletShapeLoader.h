@@ -110,7 +110,10 @@ public:
                         bool isManual = false, Ogre::ManualResourceLoader* loader = 0,
                         const Ogre::NameValuePairList* createParams = 0);
 
-    virtual BulletShapePtr load(const Ogre::String &name, const Ogre::String &group);
+    virtual Ogre::ResourcePtr load(const Ogre::String &name, const Ogre::String &group,
+                        bool isManual = false, Ogre::ManualResourceLoader* loader = 0,
+                        const Ogre::NameValuePairList* loadParams = 0,
+                        bool backgroundThread = false);
 
     static BulletShapeManager &getSingleton();
     static BulletShapeManager *getSingletonPtr();

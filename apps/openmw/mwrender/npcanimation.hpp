@@ -143,7 +143,9 @@ public:
     virtual void showCarriedLeft(bool showa);
 
     virtual void attachArrow();
+    using WeaponAnimation::attachArrow;
     virtual void releaseArrow();
+    using WeaponAnimation::releaseArrow;
 
     // WeaponAnimation
     virtual NifOgre::ObjectScenePtr getWeapon() { return mObjectParts[ESM::PRT_Weapon]; }

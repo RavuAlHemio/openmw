@@ -10,6 +10,7 @@ namespace MWGui
         public:
             ConfirmationDialog();
             void open(const std::string& message, const std::string& confirmMessage="#{sOk}", const std::string& cancelMessage="#{sCancel}");
+            using WindowModal::open;
             virtual void exit();
 
             typedef MyGUI::delegates::CMultiDelegate0 EventHandle_Void;

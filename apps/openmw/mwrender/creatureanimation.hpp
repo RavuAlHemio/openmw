@@ -38,7 +38,9 @@ namespace MWRender
         void updatePart(NifOgre::ObjectScenePtr& scene, int slot);
 
         virtual void attachArrow();
+        using WeaponAnimation::attachArrow;
         virtual void releaseArrow();
+        using WeaponAnimation::releaseArrow;
 
         virtual Ogre::Vector3 runAnimation(float duration);
 

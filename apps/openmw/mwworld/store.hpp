@@ -313,6 +313,7 @@ namespace MWWorld
             return erase(item.mId);
         }
 
+        using StoreBase::write;
         void write (ESM::ESMWriter& writer, Loading::Listener& progress) const
         {
             for (typename Dynamic::const_iterator iter (mDynamic.begin()); iter!=mDynamic.end();

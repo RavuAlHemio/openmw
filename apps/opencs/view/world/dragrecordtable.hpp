@@ -34,6 +34,7 @@ namespace CSVWorld
 
         protected:
             void startDrag(const DragRecordTable& table);
+            using QTableView::startDrag;
 
             void dragEnterEvent(QDragEnterEvent *event);
 

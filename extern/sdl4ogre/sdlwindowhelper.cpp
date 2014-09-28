@@ -72,7 +72,7 @@ SDLWindowHelper::SDLWindowHelper (SDL_Window* window, int w, int h,
 
 void SDLWindowHelper::setWindowIcon(const std::string &name)
 {
-	Ogre::TexturePtr texture = Ogre::TextureManager::getSingleton().load(name, Ogre::ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME);
+	Ogre::TexturePtr texture = Ogre::TextureManager::getSingleton().load(name, Ogre::ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME, Ogre::TEX_TYPE_2D);
 	if (texture.isNull())
 	{
 		std::stringstream error;
