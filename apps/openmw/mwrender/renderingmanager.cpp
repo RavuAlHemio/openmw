@@ -54,9 +54,8 @@ namespace MWRender {
 
 RenderingManager::RenderingManager(OEngine::Render::OgreRenderer& _rend, const boost::filesystem::path& resDir,
                                    const boost::filesystem::path& cacheDir, OEngine::Physic::PhysicEngine* engine,
-                                   MWWorld::Fallback* fallback)
+                                   MWWorld::Fallback* )
     : mSunEnabled(0)
-    , mFallback(fallback)
     , mTerrain(NULL)
     , mRendering(_rend)
     , mEffectManager(NULL)

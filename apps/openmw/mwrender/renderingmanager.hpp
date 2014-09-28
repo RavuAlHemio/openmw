@@ -224,8 +224,6 @@ private:
 
     bool mSunEnabled;
 
-    MWWorld::Fallback* mFallback;
-
     SkyManager* mSkyManager;
 
     OcclusionQuery* mOcclusionQuery;
@@ -233,8 +231,6 @@ private:
     Terrain::World* mTerrain;
 
     MWRender::Water *mWater;
-
-    GlobalMap* mGlobalMap;
 
     OEngine::Render::OgreRenderer &mRendering;
 

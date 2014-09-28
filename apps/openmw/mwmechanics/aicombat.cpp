@@ -85,7 +85,6 @@ namespace
 
 namespace MWMechanics
 {
-    static const float DOOR_CHECK_INTERVAL = 1.5f; // same as AiWander
     // NOTE: MIN_DIST_TO_DOOR_SQUARED is defined in obstacle.hpp
 
     AiCombat::AiCombat(const MWWorld::Ptr& actor) :

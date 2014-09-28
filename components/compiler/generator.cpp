@@ -150,10 +150,12 @@ namespace
         code.push_back (Compiler::Generator::segment0 (2, offset));
     }
 
+#if 0
     void opSkipOnZero (Compiler::Generator::CodeContainer& code)
     {
         code.push_back (Compiler::Generator::segment5 (24));
     }
+#endif
 
     void opSkipOnNonZero (Compiler::Generator::CodeContainer& code)
     {

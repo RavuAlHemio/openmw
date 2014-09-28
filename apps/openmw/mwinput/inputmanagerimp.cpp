@@ -117,7 +117,6 @@ namespace MWInput
         , mMouseX(ogre.getWindow()->getWidth ()/2.f)
         , mMouseY(ogre.getWindow()->getHeight ()/2.f)
         , mMouseWheel(0)
-        , mUserFileExists(userFileExists)
         , mAlwaysRunActive(Settings::Manager::getBool("always run", "Input"))
         , mAttemptJump(false)
     {

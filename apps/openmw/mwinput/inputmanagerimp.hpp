@@ -161,7 +161,6 @@ namespace MWInput
         float mMouseX;
         float mMouseY;
         int mMouseWheel;
-        bool mUserFileExists;
         bool mAlwaysRunActive;
         bool mAttemptJump;
 
