@@ -470,7 +470,7 @@ namespace MWMechanics
                             ((Ogre::Math::ASin(dir.x / length).valueRadians()>0)?1.0:-1.0)).valueDegrees();
                     float actorAngle = actor.getRefData().getBaseNode()->getOrientation().getRoll().valueDegrees();
                     // an attempt at reducing the turning animation glitch
-                    if(abs(abs(faceAngle) - abs(actorAngle)) >= 5) // TODO: is there a better way?
+                    if(std::abs(std::abs(faceAngle) - std::abs(actorAngle)) >= 5) // TODO: is there a better way?
                     {
                         mTargetAngle = faceAngle;
                         mRotate = true;
