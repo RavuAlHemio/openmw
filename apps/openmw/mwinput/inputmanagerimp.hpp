@@ -38,7 +38,7 @@ namespace ICS
 
 namespace MyGUI
 {
-    class MouseButton;
+    struct MouseButton;
 }
 
 #include <extern/oics/ICSChannelListener.h>

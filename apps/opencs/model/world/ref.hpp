@@ -5,7 +5,7 @@
 
 namespace CSMWorld
 {
-    class Cell;
+    struct Cell;
 
     /// \brief Wrapper for CellRef sub record
     struct CellRef : public ESM::CellRef
